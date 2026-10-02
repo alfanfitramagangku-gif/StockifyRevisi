@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Pengaturan dasar halaman */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f3f4f6;
+}
+
+/* Memastikan elemen menggunakan perhitungan ukuran yang benar */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Tabel agar tidak merusak tampilan halaman */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Gambar tidak melebihi ukuran wadah */
+img {
+    max-width: 100%;
+}
+
+/* Scrollbar sidebar */
+aside nav::-webkit-scrollbar {
+    width: 6px;
+}
+
+aside nav::-webkit-scrollbar-thumb {
+    background-color: #475569;
+    border-radius: 10px;
+}
+
+/* Tampilan responsif */
+@media (max-width: 1024px) {
+    aside {
+        width: 220px !important;
+    }
+
+    .main-content {
+        margin-left: 220px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    aside {
+        width: 200px !important;
+    }
+
+    .main-content {
+        margin-left: 200px !important;
+    }
+}
